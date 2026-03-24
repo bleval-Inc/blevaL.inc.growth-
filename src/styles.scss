@@ -1,0 +1,189 @@
+// ============================================
+// APEX REALTY - GLOBAL STYLES
+// ============================================
+
+// Import design system
+@import 'styles/variables';
+@import 'styles/typography';
+@import 'styles/buttons';
+@import 'styles/cards';
+@import 'styles/layout';
+@import 'styles/animations';
+
+// ============================================
+// ROOT & BASE STYLES
+// ============================================
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $color-primary-dark;
+  color: $color-text-light;
+  font-family: $font-sans;
+}
+
+// ============================================
+// SCROLLBAR STYLING
+// ============================================
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba($color-white, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($color-accent-gold, 0.6);
+  border-radius: 5px;
+
+  &:hover {
+    background: rgba($color-accent-gold, 0.8);
+  }
+}
+
+// ============================================
+// FORM ELEMENTS
+// ============================================
+
+input,
+textarea,
+select {
+  font-family: $font-sans;
+  font-size: $font-size-body;
+  color: $color-text-light;
+  background: rgba($color-white, 0.08);
+  border: 1px solid rgba($color-white, 0.15);
+  border-radius: $radius-md;
+  padding: $spacing-sm $spacing-md;
+  transition: all $transition-quick;
+
+  &::placeholder {
+    color: rgba($color-text-light, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent-gold;
+    background: rgba($color-white, 0.12);
+    box-shadow: 0 0 0 3px rgba($color-accent-gold, 0.15);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+label {
+  display: block;
+  margin-bottom: $spacing-sm;
+  color: rgba($color-text-light, 0.9);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+// ------ FORM GROUP ------
+.form-group {
+  margin-bottom: $spacing-lg;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ============================================
+// IMAGES
+// ============================================
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: $radius-md;
+}
+
+// ============================================
+// LINKS & NAVIGATION
+// ============================================
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-quick;
+
+  &:hover,
+  &:focus {
+    color: $color-accent-gold;
+  }
+}
+
+nav a {
+  position: relative;
+  color: $color-text-light;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $color-accent-gold;
+    transition: width $transition-smooth;
+  }
+
+  &:hover::after,
+  &.active::after {
+    width: 100%;
+  }
+}
+
+// ============================================
+// UTILITIES
+// ============================================
+
+.clearfix {
+  clear: both;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// ============================================
+// RESPONSIVE UTILITIES
+// ============================================
+
+@media (max-width: $tablet - 1) {
+  h1 {
+    word-spacing: 9999px; // Prevent widow words on mobile
+  }
+}
