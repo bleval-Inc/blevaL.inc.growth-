@@ -1,0 +1,123 @@
+// ============================================
+// TYPOGRAPHY SYSTEM
+// ============================================
+
+@use 'sass:color';
+@import 'variables';
+
+@mixin font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ------ HEADINGS ------
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-serif;
+  font-weight: 700;
+  line-height: $line-height-heading;
+  @include font-smooth;
+  margin: 0;
+  color: inherit;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  letter-spacing: -0.015em;
+  margin-bottom: $spacing-lg;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  margin-bottom: $spacing-md;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  margin-bottom: $spacing-md;
+}
+
+// ------ BODY TEXT ------
+body {
+  font-family: $font-sans;
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  color: $color-text-light;
+  @include font-smooth;
+}
+
+p {
+  margin: 0 0 $spacing-md 0;
+  color: rgba($color-text-light, 0.95);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// ------ TEXT UTILITIES ------
+.text-small {
+  font-size: $font-size-small;
+  color: rgba($color-text-light, 0.85);
+}
+
+.text-muted {
+  color: rgba($color-text-light, 0.7);
+}
+
+.text-gold {
+  color: $color-accent-gold;
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// ------ LINK STYLES ------
+a {
+  color: $color-accent-gold;
+  text-decoration: none;
+  transition: color $transition-quick;
+
+  &:hover {
+    color: color.adjust($color-accent-gold, $lightness: 8%);
+  }
+}
+
+// ------ BLOCKQUOTE ------
+blockquote {
+  border-left: 4px solid $color-accent-gold;
+  padding-left: $spacing-lg;
+  margin: $spacing-lg 0;
+  font-style: italic;
+  color: rgba($color-text-light, 0.9);
+  line-height: $line-height-body + 0.2;
+}
+
+// ------ LISTS ------
+ul, ol {
+  margin: 0 0 $spacing-md 0;
+  padding-left: $spacing-lg;
+
+  li {
+    margin-bottom: $spacing-sm;
+    color: rgba($color-text-light, 0.9);
+  }
+}
+
+// ------ SMALL TEXT ------
+small {
+  font-size: $font-size-small;
+  color: rgba($color-text-light, 0.75);
+}
+
+// ------ STRONG ------
+strong, b {
+  font-weight: 700;
+  color: rgba($color-text-light, 1);
+}

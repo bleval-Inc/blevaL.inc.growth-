@@ -1,0 +1,157 @@
+// ============================================
+// BUTTON SYSTEM
+// ============================================
+
+@use 'sass:color';
+@import 'variables';
+
+// ------ PRIMARY BUTTON ------
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: $font-sans;
+  border: none;
+  border-radius: $radius-md;
+  background: linear-gradient(120deg, $color-accent-gold, color.adjust($color-accent-gold, $lightness: -5%));
+  color: $color-text-dark;
+  cursor: pointer;
+  transition: all $transition-smooth;
+  box-shadow: 0 8px 24px rgba($color-accent-gold, 0.3);
+  text-transform: none;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    background: linear-gradient(
+      120deg,
+      mix($color-accent-gold, #1a1a2e, 70%),
+      mix($color-accent-gold, #1a1a2e, 50%)
+    );
+    color: color.adjust($color-accent-gold, $lightness: -15%); // ✅ DARK GOLD TEXT
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba($color-accent-gold, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba($color-accent-gold, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent-gold;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  &.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+// ------ SECONDARY BUTTON ------
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: $font-sans;
+  border: 1.5px solid rgba($color-accent-gold, 0.6);
+  border-radius: $radius-md;
+  background: transparent;
+  color: #e2b96f;
+  cursor: pointer;
+  transition: all $transition-smooth;
+
+  &:hover {
+    background: rgba($color-accent-gold, 0.12);
+    border-color: $color-accent-gold;
+    color: color.adjust($color-accent-gold, $lightness: -15%); // ✅ DARK GOLD TEXT
+  }
+
+  &:active {
+    background: rgba($color-accent-gold, 0.2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent-gold;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  &.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+// ------ OUTLINE BUTTON ------
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: $font-sans;
+  border: 2px solid rgba($color-text-light, 0.3);
+  border-radius: $radius-md;
+  background: transparent;
+  color: $color-text-light;
+  cursor: pointer;
+  transition: all $transition-smooth;
+
+  &:hover {
+    border-color: $color-accent-gold;
+    background: rgba($color-accent-gold, 0.1);
+    color: color.adjust($color-accent-gold, $lightness: -15%); // ✅ DARK GOLD TEXT
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent-gold;
+    outline-offset: 2px;
+  }
+}
+
+// ------ SMALL BUTTON ------
+.btn-small {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+// ------ BUTTON GROUP ------
+.btn-group {
+  display: flex;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet) {
+    gap: $spacing-sm;
+  }
+}

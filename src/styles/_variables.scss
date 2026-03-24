@@ -1,0 +1,70 @@
+// ============================================
+// APEX REALTY - DESIGN SYSTEM VARIABLES
+// ============================================
+
+// ------ COLORS ------
+$color-primary-dark: #1a1a2e; // Deep Navy (primary background)
+$color-secondary-dark: #2c2c54; // Mid Navy (panels)
+$color-accent-gold: #e2b96f; // Gold (CTAs & accents)
+$color-accent-dark-gold: #c9973f; // Darker gold (hover)
+$color-light-bg: #f5f0e8; // Warm off-white
+$color-white: #ffffff;
+$color-text-light: #f5f0e8;
+$color-text-dark: #1a1a2e;
+$color-text-muted: #666;
+$color-border-light: rgba(255, 255, 255, 0.15);
+$color-shadow-dark: rgba(0, 0, 0, 0.35);
+$color-shadow-light: rgba(0, 0, 0, 0.1);
+
+// ------ TYPOGRAPHY ------
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+$font-size-h1: clamp(2rem, 5vw, 3.5rem);
+$font-size-h2: clamp(1.75rem, 4vw, 2.5rem);
+$font-size-h3: clamp(1.25rem, 3vw, 1.75rem);
+$font-size-h4: 1.25rem;
+$font-size-body: 1rem;
+$font-size-small: 0.875rem;
+
+$line-height-heading: 1.2;
+$line-height-body: 1.6;
+
+// ------ SPACING ------
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+$spacing-3xl: 5rem;
+
+// Mobile/desktop padding
+$section-padding-mobile: $spacing-lg;
+$section-padding-tablet: $spacing-2xl;
+$section-padding-desktop: $spacing-3xl;
+
+// Container
+$container-max-width: 1200px;
+
+// ------ BORDER RADIUS ------
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+
+// ------ SHADOWS ------
+$shadow-soft: 0 10px 30px $color-shadow-light;
+$shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.15);
+$shadow-heavy: 0 20px 60px rgba(0, 0, 0, 0.2);
+$shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+
+// ------ TRANSITIONS ------
+$transition-quick: 250ms ease;
+$transition-smooth: 350ms ease;
+$transition-slow: 500ms ease;
+
+// ------ BREAKPOINTS ------
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1280px;
